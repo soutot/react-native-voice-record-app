@@ -7,6 +7,9 @@ Simple record voice app using React Native 0.42
 * Play recorded audios
 * Delete audio files
 
+## Demo ##
+![Demo](http://i.giphy.com/l0Iy041C79iaK13uo.gif)
+
 ## Setup ##
 
 `` npm install ``
