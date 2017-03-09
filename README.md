@@ -11,9 +11,8 @@ Simple record voice app using React Native 0.42
 
 `` npm install ``
 
-This app uses react-native-fs and react-native-audio. You can check the installation proccess in their GitHub repositories:
-https://github.com/johanneslumpe/react-native-fs
-https://github.com/jsierles/react-native-audio
+This app uses [react-native-fs](https://github.com/johanneslumpe/react-native-fs) and [react-native-audio](https://github.com/jsierles/react-native-audio). You can check the installation proccess in their GitHub repositories
+
 
 ## Important to Mention ##
 * The layout and buttons are quite simple, just to markup to UI.
