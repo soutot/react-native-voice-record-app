@@ -36,7 +36,7 @@ class App extends Component {
 
     	this.updateDataSource();
 
-      this._checkPermission().then((hasPermission) => {
+      	this._checkPermission().then((hasPermission) => {
         this.setState({ hasPermission });
 
         if (!hasPermission) return;
@@ -86,13 +86,13 @@ class App extends Component {
 	prepareRecordingPath() {
 		const filename = new Date().toISOString().slice(0,10).replace(/-/g,"") + (new Date).toTimeString().slice(0,8).replace(':','').replace(':', '');
 		const audioPath = this.state.audioPath + '/'+filename+'.aac'
-      AudioRecorder.prepareRecordingAtPath(audioPath, {
-        SampleRate: 22050,
-        Channels: 1,
-        AudioQuality: "Low",
-        AudioEncoding: "aac",
-        AudioEncodingBitRate: 32000
-      });
+		AudioRecorder.prepareRecordingAtPath(audioPath, {
+			SampleRate: 22050,
+			Channels: 1,
+			AudioQuality: "Low",
+			AudioEncoding: "aac",
+			AudioEncodingBitRate: 32000
+		});
     }
 
     _checkPermission() {
@@ -128,8 +128,6 @@ class App extends Component {
 		}
 
 		this.setState({recording: true, displayModal: true});
-
-		console.log('modal: ', this.state.recording);
 
 		try {
 			const filePath = await AudioRecorder.startRecording();
@@ -168,10 +166,6 @@ class App extends Component {
 				});
 			}, 100);
 		}, 100);
-	}
-
-	onPausePress() {
-		return;
 	}
 
 	async onStopPress() {
